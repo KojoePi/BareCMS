@@ -26,37 +26,66 @@ Upload all files to your webserver directory.
 
 ### 2. Create Directory Structure
 
+```
 mkdir content
+```
+```
 touch config.json
+```
+```
 touch pages.json
+```
+```
 touch nav-main.html
+```
+```
 touch nav-side.html
+```
 
 ### 3. Set Permissions
 Set owner (replace www-data with your webserver user)
-chown -R www-data:www-data .
+```
+chown -R www-data:www-data
+```
 
 #### Set directory permissions
+```
 find . -type d -exec chmod 755 {} \;
-
+```
 #### Set file permissions
+```
 find . -type f -exec chmod 644 {} \;
+```
 
 #### Set special permissions for writable files
+```
 chmod 664 config.json
-chmod 664 pages.json
-chmod 664 nav-main.html
-chmod 664 nav-side.html
-chmod 664 credentials.json
-
+```
+```
+chmod 664 pages.json`
+```
+```
+chmod 664 nav-main.html`
+```
+```
+chmod 664 nav-side.html`
+```
+```
+chmod 664 credentials.json`
+```
 #### Set permissions for content directory
-chmod 775 content
+```
+chmod 775 content```
+```
 chmod 664 content/*.html
+```
+```
 chmod 664 content/*.php
+```
 
 ### 4. Create Login Credentials
 #### Create a temporary file create_credentials.php:
-
+```
 <?php
 // Define initial password
 $initialPassword = 'YourSecurePassword123!'; // Change this!
@@ -74,7 +103,7 @@ echo "Username: " . $username . "<br>";
 echo "Password: " . $initialPassword . "<br>";
 echo "<br>Please note these credentials and delete this script immediately!";
 ?>
-
+```
 #### Follow these steps:
 
 Access create_credentials.php in your browser
@@ -84,14 +113,14 @@ Change password after first login
 
 ### 5. Basic Configuration
 #### Create an initial config.json:
-
+```
 {
     "site_title": "Your Website",
     "site_name": "BareCMS",
     "site_url": "https://your-domain.com",
     "site_icon": "/logo.png"
 }
-
+```
 ## Security Notes
 Change default password immediately
 Enable HTTPS
@@ -102,34 +131,40 @@ Create regular backups
 
 ## Recommended Webserver Configuration
 ### Nginx
-"
+```
 location ~ /\. {
     deny all;
 }
-
+```
+```
 location ~* \.(json)$ {
     deny all;
 }
-
+```
+```
 location = /config.json {
     deny all;
 }
-
+```
+```
 location = /credentials.json {
     deny all;
 }
-
+```
+```
 location = /pages.json {
     deny all;
 }"
-
+```
 ### Apache (.htaccess)
+```
 <FilesMatch "\.(json)$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
-
+```
 ### Restrict backend access (optional)
+```
 <Files "backend.php">
     Order Deny,Allow
     Deny from all
@@ -137,7 +172,7 @@ location = /pages.json {
     # Add your IP address here
     Allow from your.ip.address
 </Files>
-
+```
 ## Creating PHP Pages
 In the backend, you can include PHP code in your pages. The system automatically detects PHP code and saves the file with the correct extension.
 
