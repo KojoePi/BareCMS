@@ -1,24 +1,24 @@
 # bareCMS
-A lightweight, file-based Content Management System without database.
-FILES STILL IN TESTING BUT COMING in 1st week of January 2025
+A lightweight, file-based Content Management System without database.\
+FILES STILL IN TESTING BUT COMING in 2nd week of January 2025\
 
 ## Features
-No database server required (Flat-File CMS)
-Responsive Design with Tailwind CSS
-Simple navigation with main and side menu
-Hierarchical page structure with parent-child relationships
-Support for external links
-PHP code in pages possible
-User-friendly backend
-Markdown support (optional)
-Mobile-friendly backend
-Lightweight (~100KB core size)
+No database server required (Flat-File CMS)\
+Responsive Design with Tailwind CSS\
+Simple navigation with main and side menu\
+Hierarchical page structure with parent-child relationships\
+Support for external links\
+PHP code in pages possible\
+User-friendly backend\
+Markdown support (optional)\
+Mobile-friendly backend\
+Lightweight (~100KB core size)\
 
 ## Dependencies
-PHP 7.4+ (recommended: PHP 8+)
-Apache2 or Nginx webserver
-Tailwind CSS (via CDN)
-CodeMirror for syntax highlighting (via CDN)
+PHP 7.4+ (recommended: PHP 8+)\
+Apache2 or Nginx webserver\
+Tailwind CSS (via CDN)\
+CodeMirror for syntax highlighting (via CDN)\
 
 ## Installation
 ### 1. Upload Files
@@ -119,10 +119,10 @@ echo "<br>Please note these credentials and delete this script immediately!";
 ```
 #### Follow these steps:
 
-Access cred.php in your browser
-Note down the credentials
-Delete cred.php immediately
-Change password after first login
+Access cred.php in your browser\
+Note down the credentials\
+Delete cred.php immediately\
+Change password after first login\
 
 ### 5. Basic Configuration
 #### Create an initial config.json:
@@ -135,12 +135,12 @@ Change password after first login
 }
 ```
 ## Security Notes
-Change default password immediately
-Enable HTTPS
-Set secure file permissions
-Protect sensitive JSON files
-Keep PHP up to date
-Create regular backups
+Change default password immediately\
+Enable HTTPS\
+Set secure file permissions\
+Protect sensitive JSON files\
+Keep PHP up to date\
+Create regular backups\
 
 ## Recommended Webserver Configuration
 ### Nginx
@@ -192,16 +192,19 @@ In the backend, you can include PHP code in your pages. The system automatically
 ## Backup
 ### Regularly backup:
 
-All JSON files
-The content directory
+All JSON files\
+The content directory\
 Custom templates
 
+## Security 
+To add a layer of security it would be best practice to remove backend.php and credentials.json from webroot, when you are not managing your site.
+
 #### Known Limitations
-No multi-user management
-No integrated image management
-No content versioning
+No multi-user management\
+No integrated image management\
+No content versioning\
 
 ### License
-MIT License
-
+MIT License\
+\
 Made with ♥ by relayted.de
