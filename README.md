@@ -119,9 +119,9 @@ echo "<br>Please note these credentials and delete this script immediately!";
 ```
 #### Follow these steps:
 
-Access create_credentials.php in your browser
+Access cred.php in your browser
 Note down the credentials
-Delete create_credentials.php immediately
+Delete cred.php immediately
 Change password after first login
 
 ### 5. Basic Configuration
