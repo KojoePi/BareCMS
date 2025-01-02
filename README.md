@@ -29,15 +29,19 @@ Upload all files to your webserver directory.
 ```
 mkdir content
 ```
+
 ```
 touch config.json
 ```
+
 ```
 touch pages.json
 ```
+
 ```
 touch nav-main.html
 ```
+
 ```
 touch nav-side.html
 ```
@@ -49,10 +53,13 @@ chown -R www-data:www-data
 ```
 
 #### Set directory permissions
+
 ```
 find . -type d -exec chmod 755 {} \;
 ```
+
 #### Set file permissions
+
 ```
 find . -type f -exec chmod 644 {} \;
 ```
@@ -61,21 +68,27 @@ find . -type f -exec chmod 644 {} \;
 ```
 chmod 664 config.json
 ```
+
 ```
 chmod 664 pages.json`
 ```
+
 ```
 chmod 664 nav-main.html`
 ```
+
 ```
 chmod 664 nav-side.html`
 ```
+
 ```
 chmod 664 credentials.json`
 ```
+
 #### Set permissions for content directory
 ```
-chmod 775 content```
+chmod 775 content
+```
 ```
 chmod 664 content/*.html
 ```
